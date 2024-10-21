@@ -1,16 +1,11 @@
 import React from "react"
 import Navbar from "./layoutComponents/Navbar"
 import CardContainer from "@/Utility/card/CardContainer"
-import {
-  Camera,
-  ChartNoAxesColumnDecreasing,
-  Cloudy,
-  TabletSmartphone,
-} from "lucide-react"
 import { Poppins } from "next/font/google"
+import { MoveUpRight } from "lucide-react"
 
 const poppinsBold = Poppins({
-  weight: ["600"],
+  weight: ["500"],
   style: ["normal"],
   subsets: ["latin"],
   display: "block",
@@ -22,63 +17,29 @@ const poppinsNormal = Poppins({
   display: "block",
 })
 function Home() {
-  let headerStyle = `text-[20px] ${poppinsBold?.className}`
-  let contentStyle = `tracking-wide ${poppinsNormal?.className} text-sm lg:leading-6 pt-3`
   return (
-    <section className="min-h-screen bg-black p-3">
+    <section className="min-h-screen grid place-items-center bg-black p-5 lg:p-10">
       {/* //todo nav header */}
-
-      {/* //todo carousel */}
-      <div className="container lg:max-w-[80%]  mx-auto min-h-[400px] grid auto-rows-max gap-5">
-        <Navbar />
-
-        {/* //todo banner */}
-        <CardContainer className={"rounded-2xl bg-stone-900 text-white p-2"}>
-          <div className="rounded-lg min-h-[60dvh] max-h-[65dvh]"></div>
-        </CardContainer>
-
-        {/* //todo banner cards */}
-        <div className="grid grid-cols-3 gap-3">
-          <CardContainer className={"rounded-2xl bg-stone-900 text-white p-5"}>
-            <div className="flex items-center gap-2">
-              <ChartNoAxesColumnDecreasing
-                size={25}
-                strokeWidth={3}
-                color="gray"
-              />
-              <h1 className={headerStyle}>Big-Data</h1>
-            </div>
-            <p className={contentStyle}>
-              Enterprise infrastructure is in the midst of another tectonic
-              shift as cloud and mobile join forces to make business computing
-              fundamentally different. Big Data is a buzzword that promises big
-              payouts to corporations who want to get ahead of the curve.
-            </p>
-          </CardContainer>
-          <CardContainer className={"rounded-2xl bg-stone-900 text-white p-5"}>
-            <div className="flex items-center gap-2">
-              <Cloudy size={25} strokeWidth={3} color="gray" />
-              <h1 className={headerStyle}>Cloud</h1>
-            </div>
-            <p className={contentStyle}>
-              Cloud computing is changing the way the world does business.
-              Combine onsite IT with private, managed, hybrid and public cloud
-              elements to create an environment that's right for your business.
-            </p>
-          </CardContainer>
-          <CardContainer className={"rounded-2xl bg-stone-900 text-white p-5"}>
-            <div className="flex items-center gap-2">
-              <TabletSmartphone size={25} strokeWidth={3} color="gray" />
-              <h1 className={headerStyle}>Mobile</h1>
-            </div>
-            <p className={contentStyle}>
-              You simply cant ignore the marketing potential or the
-              collaborative potential of Mobile Apps. We are there to help you
-              with the right technology and a scalable model for small
-              businesses and larger corporations.
-            </p>
-          </CardContainer>
-        </div>
+      {/* <Navbar /> */}
+      <div className="container flex flex-col gap-3 justify-between items-center">
+        <h1
+          className={`text-white text-[42px] lg:text-[72px] text-center capitalize ${poppinsBold?.className}`}
+        >
+          enterprise big-data <br /> cloud and mobile
+        </h1>
+        <p
+          className={`text-white p-5 text-lg text-center ${poppinsNormal?.className}`}
+        >
+          Agility and Accountability.
+        </p>
+        <button
+          className={`text-white bg-[#0A0EFF] rounded-full p-3 ${poppinsNormal?.className} flex items-center gap-2 hover:shadow-lg hover:shadow-[#0A0EFF]/50 transition-shadow duration-150`}
+        >
+          <span>Contact us</span>
+          <span className="bg-white rounded-full p-2">
+            <MoveUpRight color="#0A0EFF" size={18} />
+          </span>
+        </button>
       </div>
     </section>
   )

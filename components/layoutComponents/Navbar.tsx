@@ -22,7 +22,7 @@ function Navbar() {
   ]
   return (
     <nav
-      className={`bg-stone-700/10 sticky top-2 backdrop-blur-sm rounded-full ${poppins?.className} flex justify-between items-center`}
+      className={`bg-white/10 w-5/6 fixed top-3 backdrop-blur-sm rounded-full ${poppins?.className} flex justify-between items-center`}
     >
       {/* //todo logo */}
       <div className="w-[200px] h-[50px]  grid place-items-center">
