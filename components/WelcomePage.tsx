@@ -1,6 +1,7 @@
 import React from "react"
 import { Poppins } from "next/font/google"
-
+import Welcomebanner from "../components/assets/pexels-rdne-5922212.jpg"
+import Image from "next/image"
 const poppinsBold = Poppins({
   weight: ["600"],
   style: ["normal"],
@@ -14,6 +15,7 @@ const poppinsNormal = Poppins({
   display: "block",
 })
 function WelcomePage() {
+  let welcomeImage: any = Welcomebanner?.src
   let listItems: string[] = [
     "Higher sales and Profitability.",
     "Collaboration and Competitive advantage.",
@@ -22,41 +24,51 @@ function WelcomePage() {
   ]
   let principleItems: string[] = ["Leadership", "Community", "Creativity"]
   return (
-    <section className="min-h-screen bg-black p-3 grid place-items-center">
-      <div className="p-2 container lg:max-w-[60%] grid grid-cols-2 gap-5">
+    <section className="min-h-screen bg-black p-10 grid place-items-center">
+      <div className="p-2 container mx-auto  grid lg:grid-cols-2 gap-5">
         {/* //todo card banner image */}
-        <div className="rounded-lg p-2 bg-stone-900 w-4/5 mx-auto min-h-[500px] relative z-[3]">
+        <div className="size-fit mx-auto relative">
           <svg
-            className="size-44 absolute -top-20 -left-20 rotate-45 z-[-1]"
+            className="absolute -top-16 -left-10 size-32 z-0 rotate-6"
             viewBox="0 0 200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_116_153)">
+            <g clipPath="url(#clip0_234_943)">
               <path
-                d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"
-                fill="url(#paint0_linear_116_153)"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M200 50V4.37114e-06L100 0V49.9803C99.9893 22.3751 77.6077 4.37114e-06 50 4.37114e-06H2.18557e-06V100H50C22.3858 100 -1.20706e-06 122.386 0 150L2.18557e-06 200H100L100 150C100 177.614 122.386 200 150 200H200L200 100H150.02C177.625 99.9893 200 77.6077 200 50Z"
+                fill="url(#paint0_linear_234_943)"
               />
             </g>
             <defs>
               <linearGradient
-                id="paint0_linear_116_153"
-                x1="100"
-                y1="0"
-                x2="100"
-                y2="200"
+                id="paint0_linear_234_943"
+                x1="27.5"
+                y1="19"
+                x2="149"
+                y2="174.5"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FF8B01" />
-                <stop offset="1" stop-color="#FFDBB0" />
+                <stop stopColor="#FD841F" />
+                <stop offset="1" stopColor="#FFF5F1" />
               </linearGradient>
-              <clipPath id="clip0_116_153">
+              <clipPath id="clip0_234_943">
                 <rect width="200" height="200" fill="white" />
               </clipPath>
             </defs>
           </svg>
+          <Image
+            width={350}
+            height={400}
+            src={welcomeImage}
+            alt="welcome_banner"
+            className="mx-auto  z-10 relative"
+            objectFit="contain"
+          />
         </div>
-        <div className="rounded-lg p-2 text-white">
+        <div className="rounded-lg text-white">
           <h1 className={`text-[40px] capitalize ${poppinsBold?.className}`}>
             Welcome To ZettaStack
           </h1>
@@ -75,7 +87,7 @@ function WelcomePage() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_116_153)">
+                    <g clipPath="url(#clip0_116_153)">
                       <path
                         d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"
                         fill="url(#paint0_linear_116_153)"
@@ -90,8 +102,8 @@ function WelcomePage() {
                         y2="200"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="#FF8B01" />
-                        <stop offset="1" stop-color="#FFDBB0" />
+                        <stop stopColor="#FF8B01" />
+                        <stop offset="1" stopColor="#FFDBB0" />
                       </linearGradient>
                       <clipPath id="clip0_116_153">
                         <rect width="200" height="200" fill="white" />
@@ -121,7 +133,7 @@ function WelcomePage() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_116_153)">
+                    <g clipPath="url(#clip0_116_153)">
                       <path
                         d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"
                         fill="url(#paint0_linear_116_153)"
@@ -136,8 +148,8 @@ function WelcomePage() {
                         y2="200"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="#FF8B01" />
-                        <stop offset="1" stop-color="#FFDBB0" />
+                        <stop stopColor="#FF8B01" />
+                        <stop offset="1" stopColor="#FFDBB0" />
                       </linearGradient>
                       <clipPath id="clip0_116_153">
                         <rect width="200" height="200" fill="white" />
