@@ -1,8 +1,7 @@
 import React from "react"
-import Navbar from "./layoutComponents/Navbar"
-import CardContainer from "@/Utility/card/CardContainer"
 import { Poppins } from "next/font/google"
 import { MoveUpRight } from "lucide-react"
+import Spline from "@splinetool/react-spline"
 
 const poppinsBold = Poppins({
   weight: ["500"],
@@ -18,10 +17,14 @@ const poppinsNormal = Poppins({
 })
 function Home() {
   return (
-    <section className="min-h-screen grid place-items-center bg-black p-5 lg:p-10">
+    <section className="min-h-screen grid place-items-center  p-5 lg:p-10">
+      <Spline
+        className="absolute inset-0 "
+        scene="https://prod.spline.design/q5hduzNglsuIxDqq/scene.splinecode"
+      />
       {/* //todo nav header */}
       {/* <Navbar /> */}
-      <div className="container flex flex-col gap-3 justify-between items-center">
+      <div className="container flex flex-col gap-3 justify-between items-center z-[1]">
         <h1
           className={`text-white text-[42px] lg:text-[72px] text-center capitalize ${poppinsBold?.className}`}
         >
