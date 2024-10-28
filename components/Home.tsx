@@ -20,7 +20,7 @@ function Home() {
     <section className="min-h-screen grid place-items-center  p-5 lg:p-10">
       <Spline
         className="absolute inset-0 "
-        scene="https://prod.spline.design/q5hduzNglsuIxDqq/scene.splinecode"
+        scene="https://prod.spline.design/gzwYMb1btZupWi3v/scene.splinecode"
       />
       {/* //todo nav header */}
       {/* <Navbar /> */}
